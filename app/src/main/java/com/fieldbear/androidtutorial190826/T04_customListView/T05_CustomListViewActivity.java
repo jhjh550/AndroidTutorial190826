@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.fieldbear.androidtutorial190826.MainActivity;
 import com.fieldbear.androidtutorial190826.R;
@@ -45,6 +48,10 @@ public class T05_CustomListViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_t05__custom_list_view);
 
         initData();
+        MyAdapter adapter = new MyAdapter();
+
+        ListView listView = findViewById(R.id.myCustomListView);
+        listView.setAdapter(adapter);
     }
 
     class MyAdapter extends BaseAdapter{
@@ -70,6 +77,17 @@ public class T05_CustomListViewActivity extends AppCompatActivity {
                 LayoutInflater inf = LayoutInflater.from(T05_CustomListViewActivity.this);
                 convertView = inf.inflate(R.layout.item_view, parent, false);
             }
+
+            Weather weather = list.get(position);
+            ImageView imageViewWeather = convertView.findViewById(R.id.imageViewWeather);
+            TextView textViewCityName = convertView.findViewById(R.id.textViewCityName);
+            TextView textViewWeather = convertView.findViewById(R.id.textViewWeather);
+            TextView textViewTemperature = convertView.findViewById(R.id.textViewTemperature);
+
+            textViewCityName.setText(weather.cityName);
+            textViewWeather.setText(weather.weatherText);
+            textViewTemperature.setText(weather.temperature+"'c");
+            imageViewWeather.setImageResource(weather.imgRes);
 
             return convertView;
         }
