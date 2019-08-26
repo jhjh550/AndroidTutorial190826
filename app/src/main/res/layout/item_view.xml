@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    tools:background="#ff0"
+    android:layout_height="200dp">
+    <ImageView
+        android:id="@+id/imageViewWeather"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        tools:src="@mipmap/ic_launcher"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/textViewCityName"
+        android:textSize="40dp"
+        android:text="city name"
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textViewWeather"
+            android:layout_below="@id/textViewCityName"
+            android:textSize="20dp"
+            android:text="weather text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textViewTemperature"
+        android:layout_margin="8dp"
+        android:layout_gravity="center_vertical"
+        android:textSize="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0'c"/>
+</LinearLayout>

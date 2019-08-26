@@ -3,7 +3,12 @@ package com.fieldbear.androidtutorial190826.T04_customListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 
+import com.fieldbear.androidtutorial190826.MainActivity;
 import com.fieldbear.androidtutorial190826.R;
 
 import java.util.ArrayList;
@@ -40,5 +45,33 @@ public class T05_CustomListViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_t05__custom_list_view);
 
         initData();
+    }
+
+    class MyAdapter extends BaseAdapter{
+
+        @Override
+        public int getCount() {
+            return list.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return list.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if(convertView == null){
+                LayoutInflater inf = LayoutInflater.from(T05_CustomListViewActivity.this);
+                convertView = inf.inflate(R.layout.item_view, parent, false);
+            }
+
+            return convertView;
+        }
     }
 }
