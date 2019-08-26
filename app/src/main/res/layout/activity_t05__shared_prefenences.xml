@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".T05_SharedPreferences.T05_SharedPrefenencesActivity">
+    tools:context=".T05_SharedPreferences.T05_SharedPreferencesActivity">
 
     <ImageView
         tools:src="@mipmap/ic_launcher"

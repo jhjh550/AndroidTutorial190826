@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.fieldbear.androidtutorial190826.R;
 
-public class T05_SharedPrefenencesActivity extends AppCompatActivity {
+public class T05_SharedPreferencesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
