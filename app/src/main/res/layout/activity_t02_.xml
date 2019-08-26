@@ -11,4 +11,9 @@
         android:text="hello world"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phone"
+        android:id="@+id/btnPhone"/>
 </LinearLayout>
