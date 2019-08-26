@@ -5,8 +5,19 @@
     android:layout_height="match_parent">
 
     <Button
+        android:layout_marginLeft="40dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="50dp"
         android:id="@+id/btnButton"
         android:text="my button"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:layout_marginTop="20dp"
+        android:text="my check box"
+        android:id="@+id/myCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
