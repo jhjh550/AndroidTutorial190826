@@ -23,7 +23,7 @@ public class T02_Activity extends AppCompatActivity {
                 Intent intent = new Intent(
                         T02_Activity.this,
                         T02_New_Activity.class);
-
+                intent.putExtra("myValue", 100);
                 startActivity(intent);
             }
         });
