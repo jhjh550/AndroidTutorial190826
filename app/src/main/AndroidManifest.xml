@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".T05_SharedPreferences.T05_AppListActivity">
-        </activity>
+        <activity android:name=".T06_Fragment.T06_Fragment_Actiivty"></activity>
+        <activity android:name=".T05_SharedPreferences.T05_AppListActivity"></activity>
         <activity android:name=".T05_SharedPreferences.T05_SharedPreferencesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".T04_customListView.T05_CustomListViewActivity"></activity>
+        <activity android:name=".T04_customListView.T05_CustomListViewActivity" />
         <activity android:name=".T03_listview.T03_ListActivity" />
         <activity android:name=".T02_Activity.T02_New_Activity" />
         <activity android:name=".T02_Activity.T02_Activity" />
