@@ -8,10 +8,36 @@
     tools:context=".T06_Fragment.T06_Fragment_Actiivty">
 
     <fragment
-        tools:layout="@layout/fragment_blank"
-        android:name="com.fieldbear.androidtutorial190826.T06_Fragment.BlankFragment"
+        tools:layout="@layout/fragment_counter"
+        android:name="com.fieldbear.androidtutorial190826.T06_Fragment.CounterFragment"
         android:id="@+id/fragment1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"/>
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove"/>
+    <Button
+        android:id="@+id/btnReplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="replace"/>
+    <Button
+        android:id="@+id/btnHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hide"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
