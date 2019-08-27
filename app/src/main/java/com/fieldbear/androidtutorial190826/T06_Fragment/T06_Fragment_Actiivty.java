@@ -38,7 +38,37 @@ public class T06_Fragment_Actiivty extends AppCompatActivity
                    transaction.commit();
                 }
                 break;
+            case R.id.btnRemove:
+                if(fragment != null){
+                    FragmentTransaction transaction = fm.beginTransaction();
+                    transaction.remove(fragment);
+                    transaction.commit();
+                }
+                break;
+            case R.id.btnReplace:
+                if(fragment != null){
+                    FragmentTransaction transaction = fm.beginTransaction();
+                    if(fragment.getTag().equals("counter")){
+                        BlankFragment newFragment = new BlankFragment();
+                        transaction.replace(R.id.frame, newFragment, "blank");
+                    }else{
+                        CounterFragment newFragment = new CounterFragment();
+                        transaction.replace(R.id.frame, newFragment, "counter");
+                    }
+                    transaction.commit();
+                }
+                break;
+            case R.id.btnHide:
+                if(fragment != null) {
+                    FragmentTransaction transaction = fm.beginTransaction();
+                    if (fragment.isHidden())
+                        transaction.show(fragment);
+                    else
+                        transaction.hide(fragment);
 
+                    transaction.commit();
+                }
+                break;
         }
     }
 }
