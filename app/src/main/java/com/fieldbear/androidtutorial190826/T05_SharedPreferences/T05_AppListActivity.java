@@ -2,6 +2,7 @@ package com.fieldbear.androidtutorial190826.T05_SharedPreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -33,6 +35,18 @@ public class T05_AppListActivity extends AppCompatActivity {
 
         AppListAdapter adapter = new AppListAdapter();
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ApplicationInfo info = infos.get(position);
+
+                Intent intent = new Intent();
+                intent.putExtra("info", info);
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
     }
 
     class AppListAdapter extends BaseAdapter{

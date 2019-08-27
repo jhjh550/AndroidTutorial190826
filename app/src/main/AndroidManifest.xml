@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".T05_SharedPreferences.T05_AppListActivity">
+        </activity>
+        <activity android:name=".T05_SharedPreferences.T05_SharedPreferencesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".T05_SharedPreferences.T05_SharedPreferencesActivity">
         </activity>
         <activity android:name=".T04_customListView.T05_CustomListViewActivity"></activity>
         <activity android:name=".T03_listview.T03_ListActivity" />
