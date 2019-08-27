@@ -4,6 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.cjj.sva.JJSearchView
+        android:id="@+id/jjsv"
+        android:layout_width="120dp"
+        android:layout_height="120dp"/>
     <Button
         android:layout_marginLeft="40dp"
         android:paddingRight="50dp"

@@ -10,6 +10,9 @@ import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.cjj.sva.JJSearchView;
+import com.cjj.sva.anim.controller.JJChangeArrowController;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,12 +20,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_widget);
 
+        final JJSearchView mJJSearchView = (JJSearchView) findViewById(R.id.jjsv);
+        mJJSearchView.setController(new JJChangeArrowController());
+
         Button btnButton = findViewById(R.id.btnButton);
         btnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "button clicked",
                         Toast.LENGTH_LONG).show();
+
+                mJJSearchView.startAnim();
             }
         });
 
