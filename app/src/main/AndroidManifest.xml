@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".T08_Thread.T08_ThreadActivity">
+        <activity android:name=".T09_AsyncTask.T09_AsyncTaskActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".T07_ViewPager.T07_ViewPagerActivity">
+        <activity android:name=".T08_Thread.T08_ThreadActivity">
         </activity>
-        <activity android:name=".T06_Fragment.T06_Fragment_Actiivty"></activity>
+        <activity android:name=".T07_ViewPager.T07_ViewPagerActivity"></activity>
+        <activity android:name=".T06_Fragment.T06_Fragment_Actiivty" />
         <activity android:name=".T05_SharedPreferences.T05_AppListActivity" />
         <activity android:name=".T05_SharedPreferences.T05_SharedPreferencesActivity" />
         <activity android:name=".T04_customListView.T05_CustomListViewActivity" />
