@@ -3,8 +3,10 @@ package com.fieldbear.androidtutorial190826.T11_JSON;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.fieldbear.androidtutorial190826.R;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,7 +24,23 @@ public class T11_JSON extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t11__json);
+
+//        try {
+//            jsonParsing();
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+        gsonParing();
     }
+
+    private void gsonParing(){
+        MyUser[] result = new Gson().fromJson(str, MyUser[].class);
+        for(int i=0; i<result.length; i++){
+            Log.d("parsing", "name: "+result[i].name);
+        }
+
+    }
+
 
     private void jsonParsing() throws JSONException {
         ArrayList<MyUser> myUserArrayList = new ArrayList<>();

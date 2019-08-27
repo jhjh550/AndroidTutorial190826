@@ -10,15 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".T11_JSON.T11_JSON"></activity>
-        <activity android:name=".T10_XML.T10_XML">
+        <activity android:name=".T12_retrofit.T12_RetrofitActivity"></activity>
+        <activity android:name=".T11_JSON.T11_JSON">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".T09_AsyncTask.T09_AsyncTaskActivity"></activity>
+        <activity android:name=".T10_XML.T10_XML"></activity>
+        <activity android:name=".T09_AsyncTask.T09_AsyncTaskActivity" />
         <activity android:name=".T08_Thread.T08_ThreadActivity" />
         <activity android:name=".T07_ViewPager.T07_ViewPagerActivity" />
         <activity android:name=".T06_Fragment.T06_Fragment_Actiivty" />
