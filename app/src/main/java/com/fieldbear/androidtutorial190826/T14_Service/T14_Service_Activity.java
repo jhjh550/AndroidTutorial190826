@@ -24,6 +24,12 @@ public class T14_Service_Activity extends AppCompatActivity {
                         T14_Service_Activity.this,
                         MyService.class);
                 startService(intent);
+
+//                MyIntentService.startActionFoo(
+//                        T14_Service_Activity.this,
+//                        "hello",
+//                        "world"
+//                );
             }
         });
 
