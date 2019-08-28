@@ -11,7 +11,14 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if(intent.getAction().equals(Intent.ACTION_POWER_CONNECTED)){
             Toast.makeText(context, "my receiver: power connected",
-                    Toast.LENGTH_LONG).show();
+                    Toast.LENGTH_SHORT).show();
+        }else if(intent.getAction().equals(Intent.ACTION_BATTERY_CHANGED)){
+            int level = intent.getIntExtra("level", 0);
+            Toast.makeText(context, "battery: "+level,
+                    Toast.LENGTH_SHORT).show();
+        }else if(intent.getAction().equals("adfadsfasdf")){
+            Toast.makeText(context, "my receiver: adfadsfasdf",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 }

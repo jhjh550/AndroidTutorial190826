@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".T15_BR.T15_BR_Activity" />
-
-        <activity android:name=".T14_Service.T14_Service_Activity">
+        <activity android:name=".T15_BR.T15_BR_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".T14_Service.T14_Service_Activity">
         </activity>
         <activity android:name=".T13_SQLite.T13_SQLiteActivity" />
         <activity android:name=".T12_retrofit.T12_RetrofitActivity" />
@@ -34,15 +35,6 @@
         <activity android:name=".T02_Activity.T02_New_Activity" />
         <activity android:name=".T02_Activity.T02_Activity" />
         <activity android:name=".MainActivity" />
-        <receiver
-            android:name=".T15_BR.MyReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
-            </intent-filter>
-        </receiver>
-
         <service
             android:name=".T14_Service.MyBoundService"
             android:enabled="true"
