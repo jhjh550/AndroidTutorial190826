@@ -63,6 +63,11 @@ public class T17_NotificationActivity extends AppCompatActivity {
         PendingIntent pIntent = PendingIntent.getActivity(
                this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
+        NotificationCompat.Action action =
+                new NotificationCompat.Action.Builder(
+                    R.drawable.ic_rainy, "Open", pIntent)
+                        .build();
+
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle("Notification Example")
                 .setContentText("This is Notification.")
@@ -70,6 +75,7 @@ public class T17_NotificationActivity extends AppCompatActivity {
                 .setChannelId(CHANNEL_ID)
                 .setAutoCancel(true)
                 .setContentIntent(pIntent)
+                .addAction(action)
                 .build();
 
         mNotificationManager.notify(100, notification);
