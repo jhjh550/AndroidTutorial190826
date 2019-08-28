@@ -10,15 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".T13_SQLite.T13_SQLiteActivity">
+        <activity android:name=".T14_Service.T14_Service_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".T12_retrofit.T12_RetrofitActivity"></activity>
-        <activity android:name=".T11_JSON.T11_JSON"></activity>
+
+        <activity android:name=".T13_SQLite.T13_SQLiteActivity"></activity>
+        <activity android:name=".T12_retrofit.T12_RetrofitActivity" />
+        <activity android:name=".T11_JSON.T11_JSON" />
         <activity android:name=".T10_XML.T10_XML" />
         <activity android:name=".T09_AsyncTask.T09_AsyncTaskActivity" />
         <activity android:name=".T08_Thread.T08_ThreadActivity" />
@@ -30,8 +32,11 @@
         <activity android:name=".T03_listview.T03_ListActivity" />
         <activity android:name=".T02_Activity.T02_New_Activity" />
         <activity android:name=".T02_Activity.T02_Activity" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity" />
+        <service
+            android:name=".T14_Service.MyService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 
