@@ -34,9 +34,12 @@
         <activity android:name=".T02_Activity.T02_Activity" />
         <activity android:name=".MainActivity" />
         <service
+            android:name=".T14_Service.MyBoundService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
             android:name=".T14_Service.MyIntentService"
-            android:exported="false"></service>
-
+            android:exported="false" />
         <service
             android:name=".T14_Service.MyService"
             android:enabled="true"
