@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".T22_SoundPool.T22_SoundPoolActivity"></activity>
         <activity android:name=".T21_RecyclerView.T21_RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".T20_RuntimePermission.T20_RuntimePermissionActivity">
-        </activity>
-        <activity android:name=".T19_WebView.T19_WebViewActivity"></activity>
+        <activity android:name=".T20_RuntimePermission.T20_RuntimePermissionActivity"></activity>
+        <activity android:name=".T19_WebView.T19_WebViewActivity" />
         <activity android:name=".T18_menu.T18_Menu_Activity" />
         <activity android:name=".T17_Notification.T17_ResultActivity" />
         <activity android:name=".T17_Notification.T17_NotificationActivity" />
@@ -54,8 +54,8 @@
             android:enabled="true"
             android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
