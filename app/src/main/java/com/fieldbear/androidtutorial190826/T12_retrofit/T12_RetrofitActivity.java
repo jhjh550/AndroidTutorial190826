@@ -1,6 +1,8 @@
 package com.fieldbear.androidtutorial190826.T12_retrofit;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -19,14 +21,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class T12_RetrofitActivity extends AppCompatActivity {
 
     ApiInterface apiInterface;
-    TextView textViewResult;
+    RecyclerView postsReyclerView;
+    PostAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_t12__retrofit);
 
-        textViewResult = findViewById(R.id.textViewResult);
+        postsReyclerView = findViewById(R.id.postsReyclerView);
+        postsReyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new PostAdapter();
+        postsReyclerView.setAdapter(adapter);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://jsonplaceholder.typicode.com/")
@@ -35,6 +41,8 @@ public class T12_RetrofitActivity extends AppCompatActivity {
 
         apiInterface = retrofit.create(ApiInterface.class);
         getPosts();
+
+
     }
 
     private void getPosts(){
@@ -43,7 +51,6 @@ public class T12_RetrofitActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<MyPost>> call, Response<List<MyPost>> response) {
                 if(response.isSuccessful() == false){
-                    textViewResult.setText("error code: "+response.code());
                     return;
                 }
 
@@ -61,8 +68,6 @@ public class T12_RetrofitActivity extends AppCompatActivity {
     }
 
     private void showPosts(List<MyPost> list){
-        for(MyPost post : list){
-            textViewResult.append(post.toString());
-        }
+        adapter.setPosts(list);
     }
 }
