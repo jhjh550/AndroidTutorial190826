@@ -5,10 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.fieldbear.androidtutorial190826.R;
-import com.fieldbear.androidtutorial190826.T07_ViewPager.MyPagerAdapter;
 
 import java.util.List;
 
@@ -39,7 +37,7 @@ public class T12_RetrofitActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        apiInterface = PostManger.getInstance().getApiInterface();
+        apiInterface = PostManager.getInstance().getApiInterface();
         apiInterface = retrofit.create(ApiInterface.class);
         getPosts();
 

@@ -10,11 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".T22_SoundPool.T22_SoundPoolActivity">
-        </activity>
-        <activity android:name=".T21_RecyclerView.T21_RecyclerViewActivity">
-        </activity>
-        <activity android:name=".T20_RuntimePermission.T20_RuntimePermissionActivity"></activity>
+        <activity android:name=".T12_retrofit.DetailActivity"></activity>
+        <activity android:name=".T22_SoundPool.T22_SoundPoolActivity"></activity>
+        <activity android:name=".T21_RecyclerView.T21_RecyclerViewActivity"></activity>
+        <activity android:name=".T20_RuntimePermission.T20_RuntimePermissionActivity" />
         <activity android:name=".T19_WebView.T19_WebViewActivity" />
         <activity android:name=".T18_menu.T18_Menu_Activity" />
         <activity android:name=".T17_Notification.T17_ResultActivity" />
@@ -23,7 +22,7 @@
         <activity android:name=".T15_BR.T15_BR_Activity" />
         <activity android:name=".T14_Service.T14_Service_Activity" />
         <activity android:name=".T13_SQLite.T13_SQLiteActivity" />
-        <activity android:name=".T12_retrofit.T12_RetrofitActivity" >
+        <activity android:name=".T12_retrofit.T12_RetrofitActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -56,8 +55,8 @@
             android:enabled="true"
             android:exported="true" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

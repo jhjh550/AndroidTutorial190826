@@ -1,5 +1,7 @@
 package com.fieldbear.androidtutorial190826.T12_retrofit;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +60,16 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         public void onBind(MyPost post) {
             textViewTitle.setText(post.title);
             textViewBody.setText(post.body);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context context = itemView.getContext();
+                    Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("postId", post.id);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

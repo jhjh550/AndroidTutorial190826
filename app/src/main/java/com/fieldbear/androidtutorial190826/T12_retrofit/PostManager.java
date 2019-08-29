@@ -1,12 +1,12 @@
 package com.fieldbear.androidtutorial190826.T12_retrofit;
 
-public class PostManger {
-    private static PostManger manger;
+public class PostManager {
+    private static PostManager manger;
     private ApiInterface apiInterface;
 
-    public static PostManger getInstance(){
+    public static PostManager getInstance(){
         if(manger == null)
-            manger = new PostManger();
+            manger = new PostManager();
 
         return manger;
     }
