@@ -10,13 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".T22_SoundPool.T22_SoundPoolActivity"></activity>
+        <activity android:name=".T22_SoundPool.T22_SoundPoolActivity">
+        </activity>
         <activity android:name=".T21_RecyclerView.T21_RecyclerViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".T20_RuntimePermission.T20_RuntimePermissionActivity"></activity>
         <activity android:name=".T19_WebView.T19_WebViewActivity" />
@@ -27,7 +23,13 @@
         <activity android:name=".T15_BR.T15_BR_Activity" />
         <activity android:name=".T14_Service.T14_Service_Activity" />
         <activity android:name=".T13_SQLite.T13_SQLiteActivity" />
-        <activity android:name=".T12_retrofit.T12_RetrofitActivity" />
+        <activity android:name=".T12_retrofit.T12_RetrofitActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".T11_JSON.T11_JSON" />
         <activity android:name=".T10_XML.T10_XML" />
         <activity android:name=".T09_AsyncTask.T09_AsyncTaskActivity" />

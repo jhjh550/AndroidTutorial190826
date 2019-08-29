@@ -39,6 +39,7 @@ public class T12_RetrofitActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        apiInterface = PostManger.getInstance().getApiInterface();
         apiInterface = retrofit.create(ApiInterface.class);
         getPosts();
 

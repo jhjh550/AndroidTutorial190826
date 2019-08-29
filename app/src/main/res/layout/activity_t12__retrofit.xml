@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".T12_retrofit.T12_RetrofitActivity">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/textViewResult"/>
+        android:id="@+id/postsReyclerView"/>
 </LinearLayout>
