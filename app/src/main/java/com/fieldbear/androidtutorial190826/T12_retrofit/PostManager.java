@@ -14,4 +14,8 @@ public class PostManager {
     public ApiInterface getApiInterface() {
         return apiInterface;
     }
+
+    public void setApiInterface(ApiInterface apiInterface) {
+        this.apiInterface = apiInterface;
+    }
 }

@@ -18,7 +18,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class T12_RetrofitActivity extends AppCompatActivity {
 
-    ApiInterface apiInterface;
     RecyclerView postsReyclerView;
     PostAdapter adapter;
 
@@ -37,14 +36,16 @@ public class T12_RetrofitActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        apiInterface = PostManager.getInstance().getApiInterface();
-        apiInterface = retrofit.create(ApiInterface.class);
+
+        PostManager.getInstance().setApiInterface(
+                        retrofit.create(ApiInterface.class));
         getPosts();
 
 
     }
 
     private void getPosts(){
+        ApiInterface apiInterface = PostManager.getInstance().getApiInterface();
         Call<List<MyPost>> call = apiInterface.getPosts();
         call.enqueue(new Callback<List<MyPost>>() {
             @Override

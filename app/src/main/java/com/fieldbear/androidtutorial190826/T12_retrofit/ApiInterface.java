@@ -1,5 +1,7 @@
 package com.fieldbear.androidtutorial190826.T12_retrofit;
 
+import org.w3c.dom.Comment;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -13,5 +15,8 @@ public interface ApiInterface {
 
     @GET("posts/{id}")
     Call<MyPost> getPost(@Path("id") int postId);
+
+    @GET("posts/{id}/comments")
+    Call<List<MyComment>> getComments(@Path("id") int postId);
 
 }
