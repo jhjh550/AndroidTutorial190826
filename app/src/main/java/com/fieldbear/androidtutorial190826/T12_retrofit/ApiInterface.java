@@ -5,7 +5,9 @@ import org.w3c.dom.Comment;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface ApiInterface {
@@ -18,5 +20,8 @@ public interface ApiInterface {
 
     @GET("posts/{id}/comments")
     Call<List<MyComment>> getComments(@Path("id") int postId);
+
+    @POST("posts")
+    Call<MyPost> createPost(@Body MyPost post);
 
 }

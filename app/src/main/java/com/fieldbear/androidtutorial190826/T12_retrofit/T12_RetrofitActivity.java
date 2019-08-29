@@ -5,6 +5,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.fieldbear.androidtutorial190826.R;
 
@@ -41,7 +44,39 @@ public class T12_RetrofitActivity extends AppCompatActivity {
                         retrofit.create(ApiInterface.class));
         getPosts();
 
+        Button btnWrite = findViewById(R.id.btnWrite);
+        btnWrite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createPost();
+            }
+        });
 
+
+    }
+
+    private void createPost(){
+        MyPost post = new MyPost(3,3, "New Title", "New Text");
+        Call<MyPost> call = PostManager.getInstance().getApiInterface().createPost(post);
+        call.enqueue(new Callback<MyPost>() {
+            @Override
+            public void onResponse(Call<MyPost> call, Response<MyPost> response) {
+                if(response.isSuccessful() == false){
+                    Toast.makeText(T12_RetrofitActivity.this,
+                            "error : "+response.code(), Toast.LENGTH_SHORT).show();
+                }else{
+                    MyPost post = response.body();
+                    Toast.makeText(T12_RetrofitActivity.this,
+                            "result : "+post.toString(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<MyPost> call, Throwable t) {
+
+            }
+        });
     }
 
     private void getPosts(){

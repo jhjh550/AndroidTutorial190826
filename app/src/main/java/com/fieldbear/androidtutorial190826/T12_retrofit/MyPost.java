@@ -8,6 +8,13 @@ public class MyPost {
     String title;
     String body;
 
+    public MyPost(int userId, int id, String title, String body) {
+        this.userId = userId;
+        this.id = id;
+        this.title = title;
+        this.body = body;
+    }
+
     @NonNull
     @Override
     public String toString() {

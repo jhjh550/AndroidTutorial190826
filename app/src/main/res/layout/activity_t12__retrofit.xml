@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".T12_retrofit.T12_RetrofitActivity">
 
+    <Button
+        android:text="write"
+        android:id="@+id/btnWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
